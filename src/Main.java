@@ -1,10 +1,7 @@
 
 import Factory.Vacancy;
 import Factory.VacancyFactory;
-import Strategy.Context;
-import Strategy.addNewVacancy;
-import Strategy.deleteVacancy;
-import Strategy.printMenu;
+import Strategy.*;
 import ObserverPattern.JavaDeveloperJobSite;
 import ObserverPattern.Subscriber;
 import ObserverPattern.Observed;
@@ -44,7 +41,7 @@ class Main {
         else if(menuNum==2){
             context.executeOperation(list);
             if(IsThereSubscriber){jobSite.notifyObserver();}
-            else {System.out.println("You addded new vacancy: "+list.getLast());}
+            else {System.out.println("You added new vacancy: "+list.getLast());}
         }
         else if(menuNum==3){
             context2.executeOperation(list);
